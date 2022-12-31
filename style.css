@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  --Softblue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --mainBG: hsl(217, 54%, 11%);
+  --cardBG: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--mainBG);
+}
+
+* {
+  font-family: "Outfit", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-card {
+  width: 325px;
+  height: 100%;
+  margin: 63px 25px;
+  border-radius: 15px;
+  background-color: var(--cardBG);
+  padding: 24px 25px;
+}
+
+.flex-img {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: var(--Cyan);
+}
+
+.image {
+  display: block;
+  width: 275px;
+  height: 275px;
+  border-radius: 8px;
+  opacity: 1;
+  /* backface-visibility: hidden; */
+}
+
+.overlay {
+  position: absolute;
+  display: block;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.flex-img:hover .overlay {
+  opacity: 1;
+}
+
+.flex-img:hover .image {
+  opacity: 0.4;
+  /* color: var(--Cyan); */
+}
+
+.equilibrium {
+  font-size: 20px;
+  letter-spacing: 0.035em;
+  font-weight: 700;
+  margin-top: 28px;
+  margin-bottom: 14px;
+  color: var(--White);
+  cursor: pointer;
+}
+
+.equilibrium:hover {
+  color: var(--Cyan);
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.005em;
+  color: var(--Softblue);
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+svg {
+  padding-top: 0.2em;
+}
+
+.eth,
+.days {
+  display: inline-block;
+  margin-left: 0.125em;
+}
+
+.price h2 {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--Cyan);
+}
+
+.line {
+  border: solid 0.01em;
+  color: var(--line);
+}
+
+.avatar {
+  margin-top: 15px;
+}
+.avatar span {
+  color: var(--White);
+  cursor: pointer;
+}
+
+#name:hover {
+  color: var(--Cyan);
+}
