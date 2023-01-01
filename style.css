@@ -97,13 +97,13 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  text-align: center;
+  align-items: center;
   margin-top: 14px;
   margin-bottom: 14px;
 }
 
-svg {
-  padding-top: 0.2em;
+.price img {
+  line-height: 2px;
 }
 
 .eth,
@@ -123,10 +123,21 @@ svg {
   color: var(--line);
 }
 
-.avatar {
+.avatar-flex {
   margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-align: center;
 }
-.avatar span {
+.avatar {
+  width: 22px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+.avatar-flex span {
   color: var(--White);
   cursor: pointer;
 }
